@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAppError">#FF00FF</color>
+    <color name="colorBodyStroke">#000000</color>
+    <color name="colorSlotStroke">#00000000</color> <!-- Transparent -->
+
+    <!--   name="colorSlotEmptyFill   there is an individual emptyFill color for different slots. -->
+    <color name="colorSlotEmptyStroke">#00000000</color>
+    <color name="colorSlotActiveFill">#22FFFFFF</color>    
+    <color name="colorSlotActiveStroke">#22FFFFFF</color>    
+    <color name="colorSlotHoverFill">#FF37f944</color>    
+    <color name="colorSlotHoverStroke">#FF37f944</color>    
+    
+</resources>

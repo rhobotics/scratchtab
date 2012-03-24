@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.binaryme.DragDrop.LinearLayoutDragCatcher xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/mainLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"  	    
+    android:focusableInTouchMode="true"
+	android:focusable="true">
+	<!-- IMPORTANTE: Disable focus on all Layouts to avoid weird android.view.ViewGroup.focusableViewAvailable stack overflows -->
+	
+    
+    <!-- TODO TitleBar - height is set in app controller to 1cm -->
+    <com.binaryme.ScratchTab.Gui.TitleBar
+    	android:id="@+id/titleBar"
+		android:layout_width="match_parent"
+	    android:layout_height="0px"
+	    android:orientation="horizontal"
+	    android:background="#FF00FF">
+    </com.binaryme.ScratchTab.Gui.TitleBar>
+    
+    
+    <LinearLayout 
+    	xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/mainLayout"
+	    android:orientation="horizontal"
+	    android:layout_weight="1.0"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:focusableInTouchMode="true"
+		android:focusable="true">
+
+	    
+	    <!-- BlockPane -->
+ 		<RelativeLayout
+ 			android:id="@+id/blockPaneWraper"
+			android:layout_width="0px"
+  			android:layout_height="match_parent"
+  			android:background="#db6c00">
+  				
+  				<LinearLayout 
+  					android:id="@+id/blockTypesNavigation"
+  					android:orientation="vertical"
+  					android:layout_width="0px"
+  					android:layout_height="match_parent"
+  					android:background="#FF0F00"/>
+  				
+  				<com.binaryme.ScratchTab.Gui.BlockPaneHorizontalScrollView
+  					android:id="@+id/blockPaneHorizontalScrollview"
+	  				android:layout_toRightOf="@id/blockTypesNavigation"
+	  				android:layout_width="0px"
+	  				android:layout_height="match_parent">
+	  				
+	  					<com.binaryme.ScratchTab.Gui.BlockPane
+		  					android:id="@+id/theBlockPanel"
+		  					android:layout_width="wrap_content"
+		  					android:layout_height="match_parent"
+							android:background="#db6c00"/>
+							
+				</com.binaryme.ScratchTab.Gui.BlockPaneHorizontalScrollView>
+				
+  			</RelativeLayout>
+			    
+			<LinearLayout 
+		  		android:orientation="vertical"
+	  			android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1.0" 
+			    android:focusableInTouchMode="true"
+    			android:focusable="true">
+
+			    
+			    
+			    <RelativeLayout 
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent"
+				    android:layout_weight="1.0" 
+				    android:focusableInTouchMode="true"
+	    			android:focusable="true" >
+	    			
+					    <!-- Workspace in wrapped by scroll containers -->
+					    <com.binaryme.ScrollViewDual.mScrollView 
+					    			android:id="@+id/verticalScrollView" 
+					    			android:layout_width="match_parent"
+					    			android:layout_height="match_parent"
+					    			android:scrollbarStyle="insideOverlay"
+					    			android:focusableInTouchMode="true"
+					    			android:focusable="true" >
+					    			
+							<com.binaryme.ScrollViewDual.mHorizontalScrollView 
+									android:id="@+id/horizontalScrollView" 
+									android:layout_width="match_parent"
+					    			android:layout_height="match_parent"
+					    			android:scrollbarStyle="insideOverlay"
+					    			android:focusableInTouchMode="true"
+					    			android:focusable="true" >
+
+					    			
+						    			<LinearLayout
+							    			android:layout_width="wrap_content"
+							    			android:layout_height="wrap_content" >
+									    			
+									    		<com.binaryme.ScratchTab.Gui.WorkspacePanel	
+									    			android:id="@+id/workspace"
+													android:layout_width="1700dp"
+									    			android:layout_height="1700dp"
+									    			android:background="#00440f" 
+									    			android:focusableInTouchMode="true"
+					    							android:focusable="true"/>							    			
+										</LinearLayout>
+										
+							</com.binaryme.ScrollViewDual.mHorizontalScrollView>
+					    </com.binaryme.ScrollViewDual.mScrollView>
+			    </RelativeLayout>
+			    
+	    		<com.binaryme.ScrollViewDual.ExternalScrollbar 
+	    			android:id="@+id/horizontalScrollViewExternalBar"
+	    			android:layout_width="match_parent" 
+	    			android:layout_height="6px"/>
+	    	</LinearLayout>
+			    
+			    
+			    
+	    
+	</LinearLayout>
+    
+</com.binaryme.DragDrop.LinearLayoutDragCatcher>

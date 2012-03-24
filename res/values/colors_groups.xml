@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <color name="control">#e6a822</color>
+     <color name="logic">#9fee00</color>
+     <color name="numbers">#76923c</color>
+	 <color name="robot">#1b51b9</color>
+     <color name="tablet">#0293dc</color>
+     <color name="variables">#f37922</color>
+</resources>
