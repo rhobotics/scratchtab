@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="textFieldHeightPx">20</integer>
+    <integer name="textFieldMinWidthPx">20</integer>
+    <integer name="textFieldTextSize">20</integer>
+    <integer name="executionTimeFast">0</integer>
+    <integer name="executionTimeMiddle">300</integer>
+    <integer name="executionTimeSlow">1000</integer>
+</resources>
